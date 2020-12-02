@@ -7,11 +7,16 @@ namespace CSharp_Inl2
     {
         static void Main(string[] args)
         {
-           
+            List<Member> members = Member.MembersList();
+
+            foreach (var member in members)
+            {
+                Console.WriteLine($"{member.FullName}");
+            }
            
         }
 
-        static private void Menu(List<Member> memberList)
+        static private void Menu(List<Member> members)
         {
             Console.WriteLine("\n1. Visa en lista på alla deltagarel \n2. Visa mig ett citat! \n3. Ta bort en medlem \nQ. Avsluta");
             Console.Write("\nVälj ett alternativ: ");

@@ -35,6 +35,14 @@ namespace CSharp_Inl2
 
             return memberList;
         }
+
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
     }
 }
 
