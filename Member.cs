@@ -17,7 +17,6 @@ namespace CSharp_Inl2
         public string FavoriteFood { get; set; }
         public string FavoriteMusic { get; set; }
         public string ProgrammingQuote { get; set; }
-
         public static List<Member> MembersList()
         {
             List<Member> memberList = new List<Member>
@@ -30,6 +29,7 @@ namespace CSharp_Inl2
                 new Member { FirstName = "Erik", LastName = "Rindlert", CityName = "Stockholm", Age = 31, Accomodation = "Lägenhet", Family = "Ogift", Pets = "Inga", LastJob = "IT-Support", Hobby = "Litteratur, datorspel", FavoriteFood = "Svensk-fransk fisksoppa", FavoriteMusic = "Schubert eller Darkthrone, beroende på dag", ProgrammingQuote = "Bygga, bygga, bygga"},
                 new Member { FirstName = "Daniel", LastName = "Arlbring", CityName = "Alingsås", Age = 24, Accomodation = "Hyr en Lägenhet", Family = "Sambo", Pets = "Inga", LastJob = "Väktare", Hobby = "Motorsport/datorspel", FavoriteFood = "Italienskt", FavoriteMusic = "House", ProgrammingQuote = "-"},
                 new Member { FirstName = "Svante", LastName = "Joelsson", CityName = "Strömstad", Age = 36, Accomodation = "Lägenhet", Family = "Sambo och en son", Pets = "Hund", LastJob = "Fritidspedagog/Förskolelärare", Hobby = "Illustrera/Animera", FavoriteFood = "Pasta al fungi", FavoriteMusic = "Gubbrock och allt som är bra", ProgrammingQuote = "Kul combo av problemlösning och kreativitet, och att en dag landa ett jobb med mer frihet"},
+                new Member { FirstName = "Farzane", LastName = "Zafarzade", CityName = "Karlstad", Age = 32, Accomodation = "Lägenhet", Family = "Min man och inget barn", Pets = "Inga", LastJob = "IT-Support", Hobby = "Träning och bakning", FavoriteFood = "Alla typer av pastarätter", FavoriteMusic = "Lugna och klassikermusik", ProgrammingQuote = "Problemlösning, inom att lösa problem man lär sig att bli mer tålmodig och kreativ."},
                 new Member { FirstName = "Sarah", LastName = "Winroth", CityName = "Vara", Age = 31, Accomodation = "Lägenhet", Family = "Gift", Pets = "Inga", LastJob = "Reseledare", Hobby = "Motionerar gärna", FavoriteFood = "Älskar mat i alla former", FavoriteMusic = "Lyssnar på det mesta", ProgrammingQuote = "Själva problemlösningen och tillfredsställelsen efteråt!"},
             };
 
