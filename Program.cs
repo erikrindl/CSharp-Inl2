@@ -46,7 +46,7 @@ namespace CSharp_Inl2
 
         private static void Menu(List<Member> members)
         {
-            Console.WriteLine("\n1. Visa en lista på alla deltagare \n2. Sök i listan \n3. Visa mig ett citat \n4. Visa mig vart medlemmarna bor: \n5. Ta bort en medlem \nQ. Avsluta");
+            Console.WriteLine("\n1. Visa en lista på alla deltagare \n2. Sök i listan \n3. Visa mig ett citat \n4. Visa mig vart medlemmarna bor \n5. Ta bort en medlem \nQ. Avsluta");
             Console.Write("\nVälj ett alternativ: ");
             string input = Console.ReadLine();
             string option = input.ToUpper();
@@ -59,6 +59,7 @@ namespace CSharp_Inl2
             else if (option == "2")
             {
                 Console.WriteLine("2. Sök i listan");
+                Console.WriteLine("Skriv Q för att gå tillbaks \n");
                 SearchList(members);
             }
             else if (option == "3")
@@ -74,6 +75,7 @@ namespace CSharp_Inl2
             else if (option == "5")
             {
                 Console.WriteLine("5. Ta bort en medlem");
+                Console.WriteLine("Skriv Q för att gå tillbaks \n");
                 DeleteMember(members);
             }
             else if (option == "Q")
@@ -102,7 +104,7 @@ namespace CSharp_Inl2
 
         private static void SearchList(List<Member> members)
         {
-            Console.WriteLine("Skriv Q för att gå tillbaks");
+
             string search;
             bool searching = true;
             while (searching == true)
@@ -115,7 +117,7 @@ namespace CSharp_Inl2
                     {
                         Console.WriteLine("\n" + members[i].FullData);
                     }
-                    else if (members[i].FullName.Equals(null)) 
+                    else if (members[i].FullName.Equals(null))
                     {
                         SearchList(members);
                     }
@@ -126,6 +128,7 @@ namespace CSharp_Inl2
                 }
             }
         }
+
         private static void DeleteMember(List<Member> members)
         {
             Console.WriteLine("Skriv Q för att gå tillbaks");
@@ -147,12 +150,12 @@ namespace CSharp_Inl2
                         if (deloption == "J")
                         {
                             members.RemoveAt(i);
-                            Console.WriteLine(tempname + " är borttagen!");
+                            Console.WriteLine($"{tempname} är borttagen!");
                         }
                         else
                         {
                             DeleteMember(members);
-                        }  
+                        }
                     }
                     else if (members[i].FullName.Equals(null))
                     {
@@ -165,6 +168,7 @@ namespace CSharp_Inl2
                 }
             }
         }
+
         private static void RandomQuote(List<Member> members)
         {
             string option;
@@ -173,7 +177,7 @@ namespace CSharp_Inl2
             while (run == true)
             {
                 int index = random.Next(members.Count);
-                Console.WriteLine(members[index].ProgrammingQuote + " - " + members[index].FullName);
+                Console.WriteLine($"{members[index].ProgrammingQuote} - {members[index].FullName}");
                 Console.Write("Fortsätt? J/N: ");
                 option = Console.ReadLine();
                 if (option == "N")
