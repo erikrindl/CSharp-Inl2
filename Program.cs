@@ -174,7 +174,7 @@ namespace CSharp_Inl2
             {
                 int index = random.Next(members.Count);
                 Console.WriteLine($"{members[index].ProgrammingQuote} - {members[index].FullName}");
-                Console.Write("Fortsätt? J/N: ");
+                Console.Write("Ett till citat? J/N: ");
                 option = Console.ReadLine();
                 if (option == "N")
                 {
