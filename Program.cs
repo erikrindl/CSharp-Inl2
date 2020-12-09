@@ -19,16 +19,12 @@ namespace CSharp_Inl2
 
         private static void LogIn(List<Member> members)
         {
-            string password = "";
+            Console.Write("Lösenord: ");
+            string password = Console.ReadLine();
             bool verify = false;
-            while (verify == false)
 
+            while (verify == false)
             {
-                while (password != "coffee n' code")
-                {
-                    Console.Write("Lösenord: ");
-                    password = Console.ReadLine();
-                }
                 if (password == "coffee n' code")
                 {
                     Console.WriteLine("Korrekt lösenord! Välkommen!");
@@ -36,7 +32,7 @@ namespace CSharp_Inl2
                 }
                 else
                 {
-                    Console.Write("Felaktigt lösenord! Prova igen: ");
+                    Console.Write("Fel lösenord, prova igen: ");
                     password = Console.ReadLine();
                 }
             }
