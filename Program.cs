@@ -12,7 +12,7 @@ namespace CSharp_Inl2
             List<Member> members = Member.MembersList();
             // Den nya listan sorteras i bokstavsordning med hjälp av System.Linq
             members = members.OrderBy(x => x.LastName).ToList();
-
+            
             Console.WriteLine("Inlämningsuppgift 2");
             LogIn(members);
         }
