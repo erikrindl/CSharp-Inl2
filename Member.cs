@@ -2,6 +2,8 @@
 
 namespace CSharp_Inl2
 {
+
+    // Getters och setters som samlas i en lista med objekten "Member"
     public class Member
     {
         public string FirstName { get; set; }
@@ -43,7 +45,7 @@ namespace CSharp_Inl2
             }
         }
 
-        public string FullData
+        public string FullInfo
         {
             get
             {

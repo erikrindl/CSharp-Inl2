@@ -10,13 +10,15 @@ namespace CSharp_Inl2
         {
             // En ny lista "members" skapas upp från Member.cs 
             List<Member> members = Member.MembersList();
-            // Den nya listan sorteras i bokstavsordning med hjälp av System.Linq
+            // Testar att sortera den nya listan i bokstavsordning med hjälp av System.Linq och ett lambda-uttryck 
             members = members.OrderBy(x => x.LastName).ToList();
             
             Console.WriteLine("Inlämningsuppgift 2");
             LogIn(members);
         }
 
+        // En enkel metod som med hjälp av en while loop kontrollerar att korrekt lösenord matas in
+        // Anropar därefter metoden Menu
         private static void LogIn(List<Member> members)
         {
             Console.Write("Lösenord: ");
@@ -40,6 +42,9 @@ namespace CSharp_Inl2
             Menu(members);
         }
 
+
+        // Meny som består av en samling if-statements som kollar om den string som användaren matar in matchar ett alternativ
+        // Testade metoden ToUpper som i detta fall innebär att användaren kan mata in ett stort eller litet Q och programmet gör samma sak oavsett
         private static void Menu(List<Member> members)
         {
             Console.WriteLine("\n1. Visa en lista på alla deltagare \n2. Sök i listan \n3. Visa mig ett citat \n4. Visa mig vart medlemmarna bor \n5. Ta bort en medlem \nQ. Avsluta");
@@ -80,6 +85,7 @@ namespace CSharp_Inl2
             }
         }
 
+        // En foreach går igenom listan och printar ut namn med hjälp av Member.cs och den lista som skapades i main
         private static void PrintList(List<Member> members)
         {
             foreach (var member in members)
@@ -89,6 +95,7 @@ namespace CSharp_Inl2
             Menu(members);
         }
 
+        // Test för att prova att skriva ut mer än bara namn
         private static void PrintListCity(List<Member> members)
         {
             foreach (var member in members)
@@ -98,6 +105,9 @@ namespace CSharp_Inl2
             Menu(members);
         }
 
+
+        // En metod för att söka bland medlemmarna och därefter skriva ut all deras information (FullInfo)
+        // (Kan förmodligen förbättras!)
         private static void SearchList(List<Member> members)
         {
 
@@ -111,7 +121,7 @@ namespace CSharp_Inl2
                 {
                     if (members[i].FullName.Equals(search))
                     {
-                        Console.WriteLine("\n" + members[i].FullData);
+                        Console.WriteLine("\n" + members[i].FullInfo);
                     }
                     else if (members[i].FullName.Equals(null))
                     {
@@ -125,6 +135,7 @@ namespace CSharp_Inl2
             }
         }
 
+        // En metod för att ta bort medlemmar som fungerar som en sökning fast index [i] används istället för att ta bort personen
         private static void DeleteMember(List<Member> members)
         {
             Console.WriteLine("Skriv Q för att gå tillbaks");
@@ -165,6 +176,8 @@ namespace CSharp_Inl2
             }
         }
 
+        // Test för att prova att skriva ut ett citat med hjälp av random
+        // random.Next plockar ut en slumpmässig siffra från members.Count och citatet med den platsen i listan skrivs ut
         private static void RandomQuote(List<Member> members)
         {
             string option;
